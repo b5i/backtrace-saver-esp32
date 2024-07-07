@@ -1,0 +1,36 @@
+{
+  "name": "backtrace-saver-esp32",
+  "version": "1.0.1",
+  "description": "A library to easily retrieve last crash's backtrace on ESP32.",
+  "keywords": "backtrace, crash, esp32",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/b5i/backtrace-saver-esp32.git"
+  },
+  "authors":
+  [
+    {
+      "name": "KOTYARA12",
+      "email": "kotyara12@yandex.ru",
+      "url": "https://github.com/kotyara12",
+      "maintainer": false
+    },
+    {
+      "name": "Antoine Bollengier",
+      "url": "https://github.com/b5i/backtrace-saver-esp32",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "frameworks": "*",
+  "platforms": "*",
+  "headers": "backtrace_saver.hpp",
+  "examples": [
+    {
+        "name": "Example",
+        "base": "examples",
+        "files": ["backtrace_saver_example.cpp"]
+    }
+  ]
+}
