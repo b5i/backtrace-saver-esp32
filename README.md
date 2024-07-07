@@ -6,6 +6,8 @@ A library to easily retrieve last crash's backtrace on ESP32.
 
 The code is mainly from KOTYARA12's article: https://kotyara12.ru/iot/remote_esp32_backtrace (thank you K12 for giving me the permission to post this module!).
 
+The module has been made for the [Paxo](https://paxo.fr) project which uses an ESP32.
+
 ## Installation
 
 1. Open platformio.ini, a project configuration file located in the root of PlatformIO project.

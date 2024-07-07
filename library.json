@@ -1,6 +1,6 @@
 {
   "name": "backtrace-saver-esp32",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library to easily retrieve last crash's backtrace on ESP32.",
   "keywords": "backtrace, crash, esp32",
   "repository":
