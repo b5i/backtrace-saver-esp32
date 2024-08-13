@@ -26,7 +26,7 @@ namespace backtrace_saver {
     {
         esp_backtrace_frame_t stk_frame;
         esp_backtrace_get_start(&(stk_frame.pc), &(stk_frame.sp), &(stk_frame.next_pc)); 
-        _debug_info.backtrace[0] = esp_cpu_process_stack_pc(stk_frame.pc);
+        _debug_info.backtrace[0] = std::make_pair(esp_cpu_process_stack_pc(stk_frame.pc), stk_frame.sp);
         bool corrupted = (esp_stack_ptr_is_sane(stk_frame.sp) &&
                             esp_ptr_executable((void*)esp_cpu_process_stack_pc(stk_frame.pc))) ?
                             false : true; 
@@ -36,7 +36,7 @@ namespace backtrace_saver {
             if (!esp_backtrace_get_next_frame(&stk_frame)) {
                 corrupted = true;
             };
-            _debug_info.backtrace[CONFIG_RESTART_DEBUG_STACK_DEPTH - i] = esp_cpu_process_stack_pc(stk_frame.pc);
+            _debug_info.backtrace[CONFIG_RESTART_DEBUG_STACK_DEPTH - i] = std::make_pair(esp_cpu_process_stack_pc(stk_frame.pc), stk_frame.sp);
         };
         #endif // CONFIG_RESTART_DEBUG_STACK_DEPTH > 1
     }

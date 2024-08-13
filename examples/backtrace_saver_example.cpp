@@ -21,7 +21,7 @@ void loop() {
   std::cout << "backtrace: " << std::endl;
   #if CONFIG_RESTART_DEBUG_STACK_DEPTH > 0
     for (int i = 0; i < CONFIG_RESTART_DEBUG_STACK_DEPTH; i++) {
-      std::cout << std::hex << current_debug_info.backtrace[i] << " ";
+      std::cout << "0x" << std::hex << current_debug_info.backtrace[i].first << ":0x" << std::hex << current_debug_info.backtrace[i].second << " ";
     }
     std::cout << std::endl;
   #endif

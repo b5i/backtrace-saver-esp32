@@ -28,4 +28,4 @@ You can also manually capture backtrace and heap information by calling `backtba
 
 ## Backtrace usage
 
-To use the backtrace information (e.g. `400d1ba7 400d575f 40082e1d 400846c8 400829c5 400891ad 4008dda5 400dffcb 400e0012 400de263 400d1beb 400d1c05 400d1c4c 400d1c7d`), use the `addr2line -pfiaC -e .pio/build/esp32/firmware.elf 400d1ba7 400d575f 40082e1d 400846c8 400829c5 400891ad 4008dda5 400dffcb 400e0012 400de263 400d1beb 400d1c05 400d1c4c 400d1c7d` command as KOTYARA12 explained [here](https://kotyara12.ru/pubs/iot/platformio-addr2name).
+To use the backtrace information (e.g. `400d1ba7:0x3ffda0a0 400d575f:0x3ffda0a0 40082e1d:0x3ffda0a0 400846c8:0x3ffda0a0 400829c5:0x3ffda0a0 400891ad:0x3ffda0a0 4008dda5:0x3ffda0a0 400dffcb:0x3ffda0a0 400e0012:0x3ffda0a0 400de263:0x3ffda0a0 400d1beb:0x3ffda0a0 400d1c05:0x3ffda0a0 400d1c4c:0x3ffda0a0 400d1c7d:0x3ffda0a0`), use the `addr2line -pfiaC -e .pio/build/esp32/firmware.elf 400d1ba7 400d575f 40082e1d 400846c8 400829c5 400891ad 4008dda5 400dffcb 400e0012 400de263 400d1beb 400d1c05 400d1c4c 400d1c7d` command as KOTYARA12 explained [here](https://kotyara12.ru/pubs/iot/platformio-addr2name) (no need to include the sp).

@@ -10,6 +10,7 @@
 #include "esp_types.h"
 #include "esp_attr.h"
 #include <esp_system.h>
+#include <utility>
 
 namespace backtrace_saver {
     void IRAM_ATTR debugHeapUpdate();
@@ -21,7 +22,7 @@ namespace backtrace_saver {
         size_t heap_free_min;
         time_t heap_min_time;
         #if CONFIG_RESTART_DEBUG_STACK_DEPTH > 0
-        uint32_t backtrace[CONFIG_RESTART_DEBUG_STACK_DEPTH];
+        std::pair<uint32_t, uint32_t> backtrace[CONFIG_RESTART_DEBUG_STACK_DEPTH]; // PC, SP
         #endif // CONFIG_RESTART_DEBUG_STACK_DEPTH
     } re_restart_debug_t;
     re_restart_debug_t debugGet();
